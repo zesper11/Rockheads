@@ -1,16 +1,16 @@
-import Hero from "./components/Hero";
-import Latest from "./components/Latest";
-import Promotion from "./components/Promotion";
-import "./index.css";
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
-  return (
-    <div className="root">
-      <Hero />
-      <Promotion />
-      <Latest />
-    </div>
-  );
+  const router = createBrowserRouter([
+    { path: "/", element: <Home /> },
+    { path: "*", element: <NotFound /> },
+  ]);
+
+  return <RouterProvider router={router} />;
 };
 
 export default App;
