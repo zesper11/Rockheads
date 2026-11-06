@@ -4,8 +4,9 @@ import promotionalImagePC from './home-scaled.png';
 import promotionalImagemobile from './mobile-home-page.png';
 import Vynal from './vynal.png';
 import Song from './song.jpg';
+import badge from './badge.png'
 
-export { heroImage, Rockheads, promotionalImagePC, promotionalImagemobile, Vynal, Song };
+export { heroImage, Rockheads, promotionalImagePC, promotionalImagemobile, Vynal, Song, badge };
 
 
 // galary images imports

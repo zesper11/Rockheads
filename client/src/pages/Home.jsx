@@ -16,7 +16,6 @@ const Home = () => {
       <Gallery />
       <Streams />
       <Footer />
-      <Navbar />
     </div>
   );
 };
