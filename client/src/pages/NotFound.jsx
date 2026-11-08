@@ -1,11 +1,23 @@
-import React from "react";
+import { badge } from "../assets/assets";
+import { Link } from "react-router-dom";
+import "./NotFound.css";
 
 const NotFound = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
-      <p className="text-lg">The page you are looking for does not exist.</p>
-    </div>
+    <main className="not-found-page">
+      <div className="not-found-content">
+        <img className="not-found-badge" src={badge} alt="Rockheads badge" />
+        <p className="not-found-eyebrow">404 · PAGE NOT FOUND</p>
+        <h1>We can’t find that page.</h1>
+        <p className="not-found-description">
+          It may have moved or the link might be incorrect. Let’s head back
+          home.
+        </p>
+        <Link className="not-found-link" to="/">
+          Go to homepage <span aria-hidden="true">→</span>
+        </Link>
+      </div>
+    </main>
   );
 };
 

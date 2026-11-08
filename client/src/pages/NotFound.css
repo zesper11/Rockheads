@@ -1,0 +1,87 @@
+.not-found-page {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  padding: 48px 24px;
+  background: #080808;
+  color: #f5f4f1;
+  text-align: center;
+}
+
+.not-found-content {
+  display: flex;
+  width: min(100%, 560px);
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found-badge {
+  width: clamp(110px, 22vw, 155px);
+  height: auto;
+  margin-bottom: 32px;
+  animation: not-found-spin 12s linear infinite;
+}
+
+.not-found-eyebrow {
+  margin: 0 0 12px;
+  color: #929292;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.not-found-content h1 {
+  max-width: 520px;
+  margin: 0;
+  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.not-found-description {
+  margin: 16px 0 28px;
+  color: #929292;
+  font-size: clamp(1.05rem, 1.2vw, 1.2rem);
+  line-height: 1.45;
+}
+
+.not-found-link {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+  border: 1px solid #f5f4f1;
+  color: #f5f4f1;
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.not-found-link:hover {
+  background: #f5f4f1;
+  color: #080808;
+}
+
+.not-found-link:focus-visible {
+  outline: 2px solid #f5f4f1;
+  outline-offset: 4px;
+}
+
+@keyframes not-found-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .not-found-badge {
+    animation: none;
+  }
+}

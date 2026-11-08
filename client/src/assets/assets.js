@@ -6,7 +6,11 @@ import Vynal from './vynal.png';
 import Song from './song.jpg';
 import badge from './badge.png'
 
-export { heroImage, Rockheads, promotionalImagePC, promotionalImagemobile, Vynal, Song, badge };
+import aboutBg from './aboutbg.jpg';
+import aboutImg from './aboutImg.jpg';
+
+
+export { heroImage, Rockheads, promotionalImagePC, promotionalImagemobile, Vynal, Song, badge, aboutBg, aboutImg };
 
 
 // galary images imports

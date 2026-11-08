@@ -22,13 +22,13 @@ const Latest = () => {
         />
       </div>
       <div className="latest-info px-8 py-12 md:px-12">
-        <p className="mb-4 text-sm tracking-widest text-neutral-500">
+        <p className="latest-kicker mb-4 text-neutral-500">
           Latest Release
         </p>
-        <h1 className="mb-6 text-5xl font-light tracking-wide text-neutral-100 md:text-7xl">
+        <h1 className="latest-title mb-6 text-neutral-100">
           Maya ko Aago
         </h1>
-        <p className="mb-10 max-w-2xl text-lg font-light leading-relaxed text-neutral-400 md:text-xl">
+        <p className="latest-description mb-10 max-w-2xl text-neutral-400">
           A fiery alternative rock anthem about the consuming passion of love,
           heartbreak, and the wounds that even time struggles to heal.
         </p>
