@@ -1,11 +1,18 @@
 // Banners
 
-import dawaBanner from "./Banners/Dawa.png";
-import rideshBanner from "./Banners/Ridesh.png";
-import sabinBanner from "./Banners/Sabin.png";
-import rupeshBanner from "./Banners/Rupesh.png";
-import sanjayBanner from "./Banners/Sanjay.png";
-import samyakBanner from "./Banners/Samayak.png";
+import dawaBanner from "./Dawa/Dawa.png";
+import rideshBanner from "./Ridesh/Ridesh.png";
+import sabinBanner from "./Sabin/Sabin.png";
+import rupeshBanner from "./Rupesh/Rupesh.png";
+import sanjayBanner from "./Sanjay/Sanjay.png";
+import samyakBanner from "./Samayak/Samayak.png";
+
+import dawaMain from "./Dawa/main.jpg";
+import rideshMain from "./Ridesh/main.jpg";
+import sabinMain from "./Sabin/main.jpg";
+import rupeshMain from "./Rupesh/main.jpg";
+import sanjayMain from "./Sanjay/main.jpg";
+import samyakMain from "./Samayak/main.webp";
 
 // Social Icons
 import { AiFillInstagram } from "react-icons/ai";
@@ -15,7 +22,8 @@ export const teamData = [
   {
     name: "Sanjay Aryal",
     role: "Vocals / Bass",
-    image: sanjayBanner,
+    banner: sanjayBanner,
+    image: sanjayMain,
 
     discription:
       "Sanjay Aryal is the vocalist, bassist and one of the creative forces behind Rockheads. Known for his expressive vocals and songwriting, he has been part of Nepal's rock music scene for years, contributing to the band's original sound and identity.",
@@ -71,8 +79,8 @@ export const teamData = [
   {
     name: "Samyak Pakhrin Lama",
     role: "Drums",
-    image: samyakBanner,
-
+    banner: samyakBanner,
+    image: samyakMain,
     discription:
       "Samyak Pakhrin Lama is a drummer and founding member of Rockheads with over two decades of experience in the Nepali music industry. Alongside his work with the band, he has performed with different musical projects and contributed to studio recordings and live performances.",
 
@@ -135,8 +143,8 @@ export const teamData = [
   {
     name: "Ridesh Pakhrin Tamang",
     role: "Guitars",
-    image: rideshBanner,
-
+    banner: rideshBanner,
+    image: rideshMain,
     discription:
       "Ridesh Pakhrin Tamang is a versatile guitarist from Kathmandu, known for his work across progressive rock, metal and experimental music. A former member of FRAGMENTS and current guitarist for Rockheads, he is also involved in music education and solo projects.",
 
@@ -208,7 +216,8 @@ export const teamData = [
   {
     name: "Dawa Sherpa",
     role: "Keyboards",
-    image: dawaBanner,
+    banner: dawaBanner,
+    image: dawaMain,
 
     discription:
       "Dawa Sherpa is a keyboardist and synthesizer player with nearly two decades of musical experience. Having worked with several Nepali bands and artists, he brings a distinctive musical texture to Rockheads through his keyboard arrangements and live performances.",
@@ -277,7 +286,8 @@ export const teamData = [
   {
     name: "Sabin Shakya",
     role: "Audio Engineer",
-    image: sabinBanner,
+    banner: sabinBanner,
+    image: sabinMain,
 
     discription:
       "Sabin Shakya is a professional audio engineer specialising in live sound and audio production. With experience across rehearsal studios, live venues and touring performances, he plays an important role in delivering the sound of Rockheads on stage.",
@@ -340,7 +350,8 @@ export const teamData = [
   {
     name: "Rupesh Gurung",
     role: "Lighting Designer",
-    image: rupeshBanner,
+    banner: rupeshBanner,
+    image: rupeshMain,
 
     discription:
       "Rupesh Gurung is a lighting designer and lighting engineer with over six years of experience in live events and stage production. His work focuses on creating dynamic lighting environments that complement performances and enhance the audience's concert experience.",

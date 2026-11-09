@@ -475,3 +475,131 @@ li Link{
   font-size: clamp(1.15rem, 1.7vw, 1.5rem);
   line-height: 1.4;
 }
+
+/* team */
+/* TEAM SECTION */
+
+.team-members {
+  /* width: 100%; */
+  /* padding: clamp(100px, 10vw, 0px) clamp(100px, 5vw, 0px); */
+  padding: clamp(10px, 10vw, 7vw);
+  background: #080808;
+  color: white;
+  overflow: hidden;
+}
+
+/* GRID */
+
+.members-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(12px, 2vw, 25px);
+  
+}
+
+/* MEMBER CARD */
+
+.member {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  min-height: 200px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  overflow: hidden;
+  background-color: #171717;
+
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+/* DARK OVERLAY */
+
+.member-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: clamp(18px, 3vw, 30px);
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.4) 35%,
+    transparent 75%
+  );
+
+  transition: background 0.3s ease;
+}
+
+/* MEMBER INFORMATION */
+
+.member-info {
+  width: 100%;
+}
+
+.member-info h3 {
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -0.5px;
+  color: #e45919;
+ -webkit-text-stroke: 1px #1b0d01;
+}
+
+.member-info p {
+  font-size: 14px;
+  color: #eed4a3;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* HOVER EFFECT */
+
+@media (hover: hover) {
+ 
+
+  .member:hover .member-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(17, 8, 0, 0.938) 0%,
+      rgba(0, 0, 0, 0.45) 45%,
+      transparent 100%
+    );
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 600px) {
+  .members-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+  .members-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* EXTRA LARGE SCREENS */
+
+@media (min-width: 1500px) {
+  .members-container {
+    gap: 28px;
+  }
+}
