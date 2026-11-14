@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { teamData } from "../assets/team/TeamData.jsx";
+import Streams from "../components/Streams.jsx";
 import Footer from "../components/Footer";
 import NotFound from "./NotFound";
 import "./Member.css";
@@ -22,7 +23,7 @@ const Member = () => {
             to="/about"
             className="member-back-link inline-flex items-center gap-2 text-sm transition-colors"
           >
-            <ArrowLeft color="#ffff" />
+            <ArrowLeft />
           </Link>
 
           <div className="member-banner">
@@ -33,26 +34,29 @@ const Member = () => {
         <div className="member-content">
           <section className="member-intro">
             <h1 className="member-name sr-only">{member.name}</h1>
-            <p className="member-role">{member.role}</p>
+            <h2 className="member-section-title">About</h2>
             <p className="member-bio">{member.discription}</p>
             {member.socials?.length > 0 && (
-              <nav
-                aria-label={`${member.name} social links`}
-                className="member-socials"
-              >
-                {member.socials.map((social) => (
-                  <a
-                    key={social.link}
-                    href={social.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Visit ${member.name}'s social profile`}
-                    className="member-social-link"
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </nav>
+              <div className="member-socials-wrap">
+                <p className="member-socials-label">Follow {member.name}</p>
+                <nav
+                  aria-label={`${member.name} social links`}
+                  className="member-socials"
+                >
+                  {member.socials.map((social, index) => (
+                    <a
+                      key={social.link}
+                      href={social.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${member.name}'s social profile ${index + 1}`}
+                      className="member-social-link"
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </nav>
+              </div>
             )}
           </section>
 
@@ -87,7 +91,7 @@ const Member = () => {
               aria-labelledby="member-achievements"
             >
               <h2 className="member-section-title" id="member-achievements">
-                Highlights
+                Achievements
               </h2>
               <div className="member-list">
                 {member.achievements.map((item) => (
@@ -109,6 +113,7 @@ const Member = () => {
           </div>
         </div>
       </main>
+      <Streams />
       <Footer />
     </>
   );

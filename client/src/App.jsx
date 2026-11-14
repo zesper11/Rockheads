@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Member from "./pages/Member";
+import Discography from "./pages/Discography";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const App = () => {
     {
       path: "/about/member/:id",
       element: <Member />,
+    },
+    {
+      path: "/discography",
+      element: <Discography />,
     },
     { path: "*", element: <NotFound /> },
   ]);
