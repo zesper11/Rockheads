@@ -1,5 +1,6 @@
 import { heroImage, Rockheads } from "../assets/assets";
 import "./Components.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -19,16 +20,30 @@ const Hero = () => {
 
       <div className="hero-nav-wrap">
         <nav className="hero-nav hero-nav-left" aria-label="Main navigation">
-          <a href="#about">About Rockheads <span aria-hidden="true">→</span></a>
-          <a href="#concerts">Concerts <span aria-hidden="true">→</span></a>
-          <a href="#discography">Discography <span aria-hidden="true">→</span></a>
-          <a href="#contact">Contact <span aria-hidden="true">→</span></a>
+          <Link to="/about">
+            About Rockheads <span aria-hidden="true">→</span>
+          </Link>
+          <Link to="/concerts">
+            Concerts <span aria-hidden="true">→</span>
+          </Link>
+          <Link to="/discography">
+            Discography <span aria-hidden="true">→</span>
+          </Link>
+          <Link to="/contact">
+            Contact <span aria-hidden="true">→</span>
+          </Link>
         </nav>
 
         <nav className="hero-nav hero-nav-right" aria-label="Featured links">
-          <a href="#live-in-uk">Live in UK <span aria-hidden="true">→</span></a>
-          <a href="#latest-release">Latest Release <span aria-hidden="true">→</span></a>
-          <a href="#gallery">Gallery <span aria-hidden="true">→</span></a>
+          <a href="#live-in-uk">
+            Live in UK <span aria-hidden="true">→</span>
+          </a>
+          <a href="#latest-release">
+            Latest Release <span aria-hidden="true">→</span>
+          </a>
+          <a href="#gallery">
+            Gallery <span aria-hidden="true">→</span>
+          </a>
         </nav>
       </div>
     </main>

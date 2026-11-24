@@ -3,8 +3,17 @@ import { Rockheads, badge } from "../assets/assets";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import "./Components.css";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [pathname]);
+
   return (
     <footer className="site-footer">
       <div className="footer-main">
@@ -48,16 +57,16 @@ const Footer = () => {
           <h3>Discover</h3>
           <ul>
             <li>
-              <a href="#about">About Us</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#concerts">Concerts</a>
+              <Link to="/concerts">Concerts</Link>
             </li>
             <li>
-              <a href="#discography">Discography</a>
+              <Link to="/discography">Discography</Link>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
